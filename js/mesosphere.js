@@ -388,10 +388,7 @@
         },
         successCallback:function(formData, formHandle){
             if (formHandle.reset) {
-                formHandle[0].reset
-            }
-            if (formHandle.reset()) {
-                formHandle[0].reset();
+                formHandle[0].reset()
             }
             $(".meso-error").text("");
             $(".meso-error").removeClass("meso-error");
