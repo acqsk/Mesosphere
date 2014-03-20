@@ -387,8 +387,12 @@
             });
         },
         successCallback:function(formData, formHandle){
-            console.log(formHandle);
-            //formHandle[0].reset && formHandle[0].reset();
+            if (formHandle.reset) {
+                formHandle[0].reset
+            }
+            if (formHandle.reset()) {
+                formHandle[0].reset();
+            }
             $(".meso-error").text("");
             $(".meso-error").removeClass("meso-error");
         }
